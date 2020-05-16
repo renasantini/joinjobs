@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-feature "headhunter authentication" do
+feature "user authentication" do
   context ' sign up' do
     scenario "succesfully" do
       
       visit root_path
-      click_on 'Cadastre-se como headhunter'
-      fill_in "E-mail",	with: "headhunter@teste.com.br" 
+      click_on 'Cadastre-se'
+      fill_in "E-mail",	with: "user@teste.com.br" 
       fill_in "Senha",	with: "12345678"
       fill_in "Confirme sua senha",	with: "12345678"
       click_on 'Sign up'
@@ -20,7 +20,7 @@ feature "headhunter authentication" do
     scenario 'and must fill in all fields' do
       
       visit root_path
-      click_on 'Cadastre-se como headhunter'
+      click_on 'Cadastre-se'
       fill_in "E-mail",	with: "" 
       fill_in "Senha",	with: ""
       fill_in "Confirme sua senha",	with: ""
@@ -28,7 +28,7 @@ feature "headhunter authentication" do
 
       expect(page).to have_content('E-mail não pode ficar em branco')
       expect(page).to have_content('Senha não pode ficar em branco')
-      expect(page).to have_link('Entrar como headhunter')
+      expect(page).to have_link('Entrar')
       expect(page).not_to have_link('Sair')
     end
     
@@ -36,11 +36,11 @@ feature "headhunter authentication" do
 
   context ' log in' do
     scenario "succesfully" do
-      headhunter = Headhunter.create!( email: 'headhunter@teste.com.br', password: '12345678')
+      user = User.create!( email: 'user@teste.com.br', password: '12345678')
 
       visit root_path
-      click_on 'Entrar como headhunter'
-      fill_in "E-mail",	with: "headhunter@teste.com.br" 
+      click_on 'Entrar'
+      fill_in "E-mail",	with: "user@teste.com.br" 
       fill_in "Senha",	with: "12345678"
       click_on 'Log in'
     end
@@ -48,12 +48,12 @@ feature "headhunter authentication" do
 
   context 'log out' do
     scenario 'successfully' do
-      headhunter = Headhunter.create!( email: 'headhunter@teste.com.br', password: '12345678')
+      user = User.create!( email: 'user@teste.com.br', password: '12345678')
 
       visit root_path
-      click_on 'Entrar como headhunter'
-      fill_in 'E-mail', with: headhunter.email
-      fill_in 'Senha', with: headhunter.password
+      click_on 'Entrar'
+      fill_in 'E-mail', with: user.email
+      fill_in 'Senha', with: user.password
       click_on 'Log in'
       click_on 'Sair'
 
