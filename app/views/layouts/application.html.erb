@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Joinjobs</title>
+    <title>JoinJobs</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,17 @@
   </head>
 
   <body>
+ <nav>
+      <% if headhunter_signed_in? %>
+        <%= link_to 'Sair', destroy_headhunter_session_path, method: :delete %>
+      <% else %>
+        <%= link_to 'Cadastre-se como headhunter', new_headhunter_registration_path %>
+        <%= link_to 'Entrar', new_headhunter_session_path %>
+      <% end %>
+    </nav>
+
+    <p class="notice"><%= flash[:notice] %></p>
+    <p class="alert"><%= flash[:alert] %></p>
     <%= yield %>
   </body>
 </html>
