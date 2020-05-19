@@ -1,0 +1,43 @@
+<h1>Cadastrar nova vaga</h1>
+
+<div>
+  <% @job.errors.full_messages.each do |message|%>
+    <p><%= message %></p>
+  <% end %>
+
+  <%= form_with(model: @job, local: true) do |f| %>
+    <p>
+      <%= f.label :title, 'Título' %>
+      <%= f.text_field :title %>
+    </p>
+    <p>
+      <%= f.label :company, 'Empresa' %>
+      <%= f.text_field :company %>
+    </p>
+    <p>
+      <%= f.label :description, 'Descrição' %>
+      <%= f.text_field :description %>
+    </p>
+    <p>
+      <%= f.label :skills, 'Habilidades desejadas' %>
+      <%= f.text_field :skills %>
+    </p>
+    <p>
+      <%= f.label :wage_range, 'Faixa salarial' %>
+      <%= f.number_field :wage_range %>
+    </p>
+    <p>
+      <%= f.label :level, 'Nível de experiência' %>
+      <%= f.text_field :level %>
+    </p>
+    <p>
+      <%= f.label :location, 'Região' %>
+      <%= f.text_field :location %>
+    </p>
+    <p>
+      <%= f.label :limit_date, 'Limite para candidatura' %>
+      <%= f.date_field :limit_date, value: Time.zone.now %>
+    </p>
+    <%= f.submit 'Cadastrar' %>
+  <% end %>
+</div>

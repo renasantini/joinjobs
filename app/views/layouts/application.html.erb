@@ -10,8 +10,10 @@
   </head>
 
   <body>
- <nav>
-      <% if headhunter_signed_in? %>
+    <nav>
+      
+    <% if headhunter_signed_in? %>
+        <%= link_to 'Cadastrar nova vaga', new_job_path %>
         <%= link_to 'Sair', destroy_headhunter_session_path, method: :delete %>
       <% elsif user_signed_in? %>
         <%= link_to 'Sair', destroy_user_session_path, method: :delete %> 
