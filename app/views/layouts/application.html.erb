@@ -16,6 +16,7 @@
         <%= link_to 'Cadastrar nova vaga', new_job_path %>
         <%= link_to 'Sair', destroy_headhunter_session_path, method: :delete %>
       <% elsif user_signed_in? %>
+        <%= link_to 'Perfil', profiles_path %>
         <%= link_to 'Sair', destroy_user_session_path, method: :delete %> 
       <% else %>
         <%= link_to 'Cadastre-se como headhunter', new_headhunter_registration_path %>

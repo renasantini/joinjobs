@@ -1,0 +1,51 @@
+<h1>preencher perfil</h1>
+
+<div>
+  <% @profile.errors.full_messages.each do |message|%>
+    <p><%= message %></p>
+  <% end %>
+
+  <%= form_with(model: @profile, local: true) do |f| %>
+    <p>
+      <%= f.label :full_name, 'Nome completo' %>
+      <%= f.text_field :full_name %>
+    </p>
+    <p>
+      <%= f.label :name, 'Como você quer ser chamado?' %>
+      <%= f.text_field :name %>
+    </p>
+    <p>
+      <%= f.label :document, 'CPF' %>
+      <%= f.text_field :document %>
+    </p>
+    <p>
+      <%= f.label :birth_date, 'Data de nascimento' %>
+      <%= f.date_field :birth_date %>
+    </p>
+    <p>
+      <%= f.label :graduation, 'Formação' %>
+      <%= f.text_field :graduation %>
+    </p>
+    <p>
+      <%= f.label :university, 'Instituição de ensino' %>
+      <%= f.text_field :university %>
+    </p>
+    <p>
+      <%= f.label :description, 'Resumo' %>
+      <%= f.text_field :description %>
+    </p>
+    <p>
+      <%= f.label :experience, 'Experiência' %>
+      <%= f.text_field :experience %>
+    </p>
+    <p>
+      <%= f.label :picture, 'Foto do perfil' %>
+      <%= f.file_field :picture %>
+    </p>
+    <p>
+      <%= f.label :resume, 'Currículo' %>
+      <%= f.file_field :resume %>
+    </p>
+    <%= f.submit 'Salvar' %>
+  <% end %>
+</div>
