@@ -1,4 +1,4 @@
-<%= image_tag @profile.picture %>
+<%= image_tag @profile.picture.variant(resize_to_limit: [150, 150]) %>
 <h1><%= @profile.name %></h1>
 
 <div>

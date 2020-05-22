@@ -8,13 +8,15 @@ class ProfilesController < ApplicationController
   
   def new
     @profile = Profile.new
+    @user = current_user
   end
   
   def create
     @profile = Profile.new(profile_params)
+    @profile.user = current_user
     if @profile.save
       flash[:success] = "Perfil criado com sucesso"
-      redirect_to @profile
+      redirect_to users_profile_path @profile
     else
       render 'new'
     end
@@ -25,6 +27,6 @@ class ProfilesController < ApplicationController
   def profile_params
     params.require(:profile).permit(:full_name, :name, :birth_date, :document,
                                     :graduation, :university, :description, 
-                                    :experience, :picture, :resume)
+                                    :experience, :picture, :resume, :user_id)
   end
 end

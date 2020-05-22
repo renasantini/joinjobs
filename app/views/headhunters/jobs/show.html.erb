@@ -1,0 +1,21 @@
+<h1><%= @job.title %></h1>
+<h4>Código da vaga: <%= @job.code %></h4>
+<dl>
+  <dt>Empresa:</dt>
+  <dd><%= @job.company %></dd>
+  <dt>Descrição:</dt>
+  <dd><%= @job.description %></dd>
+  <dt>Habilidades desejadas:</dt>
+  <dd><%= @job.skills %></dd>
+  <dt>Faixa salarial:</dt>
+  <dd><%= number_to_currency @job.wage_range %></dd>
+  <dt>Nível de experiência:</dt>
+  <dd><%= @job.level %></dd>
+  <dt>Região:</dt>
+  <dd><%= @job.location %></dd>
+  <dt>Data limite para candidatura:</dt>
+  <dd><%= l @job.limit_date %></dd>
+
+<% if user_signed_in? %>
+  <p><%= link_to 'Se candidatar para a vaga', new_job_application_path(@job)%></p>
+<% end %>

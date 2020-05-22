@@ -8,5 +8,7 @@ FactoryBot.define do
     university { "MyString" }
     description { "MyText" }
     experience { "MyText" }
+    picture { FilesTestHelper.jpg }
+    experience { FilesTestHelper.pdf }
   end
 end

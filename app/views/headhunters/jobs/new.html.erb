@@ -5,7 +5,10 @@
     <p><%= message %></p>
   <% end %>
 
-  <%= form_with(model: @job, local: true) do |f| %>
+  <%= form_with(model: @job, url: headhunters_jobs_path, local: true) do |f| %>
+    <p>
+      <%= f.hidden_field :headhunter_id, value: current_headhunter.id %>
+    </p>
     <p>
       <%= f.label :title, 'Título' %>
       <%= f.text_field :title %>

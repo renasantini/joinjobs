@@ -5,11 +5,13 @@ feature "headhunter authentication" do
     scenario "succesfully" do
       
       visit root_path
-      click_on 'Cadastre-se como headhunter'
+      click_on 'Inscrever-se como headhunter'
       fill_in "E-mail",	with: "headhunter@teste.com.br" 
       fill_in "Senha",	with: "12345678"
-      fill_in "Confirme sua senha",	with: "12345678"
-      click_on 'Sign up'
+      fill_in "Confirmar senha",	with: "12345678"
+      within 'form' do
+        click_on 'Inscrever-se'
+      end
       
       expect(page).to have_content('Bem vindo! Você realizou seu registro com sucesso.')
       expect(page).not_to have_link('Log in')
@@ -20,11 +22,13 @@ feature "headhunter authentication" do
     scenario 'and must fill in all fields' do
       
       visit root_path
-      click_on 'Cadastre-se como headhunter'
+      click_on 'Inscrever-se como headhunter'
       fill_in "E-mail",	with: "" 
       fill_in "Senha",	with: ""
-      fill_in "Confirme sua senha",	with: ""
-      click_on 'Sign up'
+      fill_in "Confirmar senha",	with: ""
+      within 'form' do
+        click_on 'Inscrever-se'
+      end
 
       expect(page).to have_content('E-mail não pode ficar em branco')
       expect(page).to have_content('Senha não pode ficar em branco')
@@ -42,7 +46,7 @@ feature "headhunter authentication" do
       click_on 'Entrar como headhunter'
       fill_in "E-mail",	with: "headhunter@teste.com.br" 
       fill_in "Senha",	with: "12345678"
-      click_on 'Log in'
+      click_on 'Login'
     end
   end
 
@@ -54,7 +58,7 @@ feature "headhunter authentication" do
       click_on 'Entrar como headhunter'
       fill_in 'E-mail', with: headhunter.email
       fill_in 'Senha', with: headhunter.password
-      click_on 'Log in'
+      click_on 'Login'
       click_on 'Sair'
 
       expect(page).to have_content('Logout efetuado com sucesso.')

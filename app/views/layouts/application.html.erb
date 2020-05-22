@@ -13,15 +13,16 @@
     <nav>
       
     <% if headhunter_signed_in? %>
-        <%= link_to 'Cadastrar nova vaga', new_job_path %>
+        <%= link_to 'Cadastrar nova vaga', new_headhunters_job_path %>
         <%= link_to 'Sair', destroy_headhunter_session_path, method: :delete %>
       <% elsif user_signed_in? %>
-        <%= link_to 'Perfil', profiles_path %>
+        <%= link_to 'Perfil', users_profiles_path %>
+        <%= link_to 'Vagas', users_jobs_path %>
         <%= link_to 'Sair', destroy_user_session_path, method: :delete %> 
       <% else %>
-        <%= link_to 'Cadastre-se como headhunter', new_headhunter_registration_path %>
+        <%= link_to 'Inscrever-se como headhunter', new_headhunter_registration_path %>
         <%= link_to 'Entrar como headhunter', new_headhunter_session_path %>
-        <%= link_to 'Cadastre-se', new_user_registration_path %>
+        <%= link_to 'Inscrever-se', new_user_registration_path %>
         <%= link_to 'Entrar', new_user_session_path %>
       <% end %>
     </nav>
