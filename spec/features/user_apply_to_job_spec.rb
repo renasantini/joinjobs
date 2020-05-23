@@ -10,7 +10,7 @@ feature 'User apply to a job' do
     click_on 'Se candidatar para a vaga'
     click_on 'Confirmar candidatura'
 
-    expect(current_path).to eq users_applications_path
+    expect(current_path).to eq user_applications_path
     expect(page).to have_content("Minhas vagas")
     expect(page).to have_content(job.title)
   end

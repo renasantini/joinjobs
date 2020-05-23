@@ -17,5 +17,5 @@
   <dd><%= l @job.limit_date %></dd>
 
 <% if user_signed_in? %>
-  <p><%= link_to 'Se candidatar para a vaga', new_job_application_path(@job)%></p>
+  <p><%= link_to 'Se candidatar para a vaga', new_user_job_application_path(@job)%></p>
 <% end %>

@@ -16,6 +16,3 @@
   <dt>Data limite para candidatura:</dt>
   <dd><%= l @job.limit_date %></dd>
 
-<% if user_signed_in? %>
-  <p><%= link_to 'Se candidatar para a vaga', new_job_application_path(@job)%></p>
-<% end %>

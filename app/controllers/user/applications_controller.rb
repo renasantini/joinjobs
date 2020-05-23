@@ -1,4 +1,4 @@
-class Users::ApplicationsController < ApplicationController
+class User::ApplicationsController < ApplicationController
   
   def index
     @user = current_user
@@ -6,20 +6,18 @@ class Users::ApplicationsController < ApplicationController
   end
   
   def new
-    @job = Job.find(params[:job_id])
-    @user = current_user
     @application = Application.new
   end
   
   def create
     @job = Job.find(params[:job_id])
     @user = current_user
-    @application = Application.new
+    @application = Application.new(application_params)
     @application.user = @user
     @application.job = @job
     if @application.save
       flash[:success] = "Candidatura confirmada"
-      redirect_to users_applications_path
+      redirect_to user_applications_path
     else
       render 'new'
     end

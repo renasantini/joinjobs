@@ -1,4 +1,4 @@
-  class Headhunters::JobsController < ApplicationController
+  class Headhunter::JobsController < ApplicationController
 
     def index
       @jobs = Job.all
@@ -18,7 +18,7 @@
       @job.headhunter = current_headhunter
       if @job.save
         flash[:success] = "Vaga criada com sucesso"
-        redirect_to headhunters_job_path @job
+        redirect_to headhunter_job_path @job
       else
         render 'new'
       end

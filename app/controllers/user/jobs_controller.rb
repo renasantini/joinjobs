@@ -1,4 +1,4 @@
-class Users::JobsController < ApplicationController
+class User::JobsController < ApplicationController
   
   def index
     @jobs = Job.all
