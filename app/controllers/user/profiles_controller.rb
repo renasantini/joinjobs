@@ -4,6 +4,8 @@ class User::ProfilesController < ApplicationController
 
   def show
     @profile = Profile.find(params[:id])
+    @answer = Answer.new()
+    @answers = Answer.all
   end
   
   def new

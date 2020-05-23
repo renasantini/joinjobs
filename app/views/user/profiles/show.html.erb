@@ -20,12 +20,23 @@
   </dl>
 </div>
 
-<div>
+
 <% if @profile.user_id == current_user.id %>
   <p>Comentários</p>
   <% @profile.comments.each do |c| %>
     <p><%= c.message %></p>
-    <p><%= c.headhunter %></p>
-    <p><%= l c.created_at%></p>
+    <p><%= l c.created_at %></p>
+    <% if c.answer.nil? %>
+      <%= form_with model: @answer, url: user_answers_path, local: true do |f| %>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        <%= f.hidden_field :comment_id, value: c.id %>
+        <%= f.label :answer, 'Responder' %>
+        <%= f.text_field :answer %>
+        <%= f.submit 'Enviar' %>
+      <% end %>
+    <% else %>
+      <%= c.answer.answer %>
+      <%= l c.answer.created_at %>
+    <% end %>
   <% end %>
 <% end %>

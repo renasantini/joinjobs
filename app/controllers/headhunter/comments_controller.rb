@@ -2,6 +2,7 @@ class Headhunter::CommentsController < ApplicationController
   
   def show
     @comments = Comment.find(params[:profile_id])
+    @answers = Answer.all
   end
 
 

@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :applications, dependent: :destroy 
   has_many :jobs, through: :applications
   has_one :profile
+  has_many :answers
 end

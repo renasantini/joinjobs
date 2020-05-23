@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_23_174633) do
+ActiveRecord::Schema.define(version: 2020_05_23_205021) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -31,6 +31,16 @@ ActiveRecord::Schema.define(version: 2020_05_23_174633) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "answers", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "comment_id", null: false
+    t.text "answer"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["comment_id"], name: "index_answers_on_comment_id"
+    t.index ["user_id"], name: "index_answers_on_user_id"
   end
 
   create_table "applications", force: :cascade do |t|
@@ -113,6 +123,8 @@ ActiveRecord::Schema.define(version: 2020_05_23_174633) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "answers", "comments"
+  add_foreign_key "answers", "users"
   add_foreign_key "applications", "jobs"
   add_foreign_key "applications", "users"
   add_foreign_key "comments", "headhunters"

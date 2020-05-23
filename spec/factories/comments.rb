@@ -1,6 +1,7 @@
 FactoryBot.define do
   factory :comment do
-    headhunter { nil }
-    profile { nil }
+    headhunter 
+    profile 
+    message { "Message" }
   end
 end

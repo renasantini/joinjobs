@@ -35,7 +35,7 @@
   <% @comments.each do |c| %>
     <% if c.headhunter_id == current_headhunter.id && c.profile_id == @profile.id %>
       <p><%= c.message %></p>
-      <p><%= l c.created_at%></p>
+      <p><%= l c.created_at %></p>
     <% end %>
   <% end %>
 <% end %>
