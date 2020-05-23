@@ -36,6 +36,14 @@
     <% if c.headhunter_id == current_headhunter.id && c.profile_id == @profile.id %>
       <p><%= c.message %></p>
       <p><%= l c.created_at %></p>
+      <% if c.answer.nil? %>
+        <p>Aguardando o candidato responder</p>
+      <% else %>
+        <%= c.answer.answer %>
+        <%= l c.answer.created_at %>
+      <% end %>
     <% end %>
   <% end %>
 <% end %>
+
+

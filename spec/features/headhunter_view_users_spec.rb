@@ -65,6 +65,23 @@ feature 'Headhunter view users' do
     expect(page).to have_content('Gostaria de saber mais sobre a sua experiência na empresa x')
   end
 
-
- 
+  scenario 'and view answers' do
+    headhunter = headhunter_login
+    job = create(:job, headhunter: headhunter)
+    user1 = create(:user)
+    user1.profile = create(:profile, name: 'user1')
+    create(:application, job: job, user: user1)
+    comment = create(:comment, headhunter: headhunter, profile: user1.profile)
+    create(:answer, user: user1, comment: comment)
+    
+    visit root_path
+    click_on 'Minhas vagas'
+    click_on job.title
+    click_on 'Candidatos'
+    click_on 'user1'
+    
+    expect(page).to have_content('user1')
+    expect(page).to have_content('Pergunta')
+    expect(page).to have_content('Resposta')
+  end
 end

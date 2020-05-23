@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :answer do
-    user { nil }
-    comment { nil }
-    answer { "MyText" }
+    user 
+    comment 
+    answer { "Resposta" }
   end
 end
