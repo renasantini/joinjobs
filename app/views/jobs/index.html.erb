@@ -1,9 +1,0 @@
-<h1>Vagas</h1>
-
-<% if @jobs.any? %>
-<ul>
-  <% @jobs.each do |job| %>
-    <li><%= link_to job.title, job %></li>
-  <% end %>
-</ul>
-<% end %>

@@ -13,6 +13,7 @@
     <nav>
       
     <% if headhunter_signed_in? %>
+        <%= link_to 'Minhas vagas', headhunter_jobs_path %>
         <%= link_to 'Cadastrar nova vaga', new_headhunter_job_path %>
         <%= link_to 'Sair', destroy_headhunter_session_path, method: :delete %>
       <% elsif user_signed_in? %>

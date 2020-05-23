@@ -3,7 +3,7 @@
 <% if @jobs.any? %>
 <ul>
   <% @jobs.each do |job| %>
-    <li><%= link_to job.title, job %></li>
+    <li><%= link_to job.title, user_job_path(job) %></li>
   <% end %>
 </ul>
 <% end %>

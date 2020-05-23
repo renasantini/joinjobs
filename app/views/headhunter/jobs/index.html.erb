@@ -1,9 +1,9 @@
-<h1>Vagas</h1>
+<h1>Minhas vagas</h1>
 
-<% if @jobs.any? %>
 <ul>
   <% @jobs.each do |job| %>
-    <li><%= link_to job.title, job %></li>
-  <% end %>
-</ul>
+    <% if job.headhunter_id == current_headhunter.id %>
+      <li><%= link_to job.title, headhunter_job_path(job) %></li>
+    <% end %>
+  </ul>
 <% end %>

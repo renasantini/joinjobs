@@ -16,6 +16,8 @@
   <dt>Data limite para candidatura:</dt>
   <dd><%= l @job.limit_date %></dd>
 
-<% if user_signed_in? %>
+<% if @job.headhunter == current_headhunter %>
+  <p><%= link_to 'Candidatos', headhunter_job_candidates_path(@job)%></p>
+<% elsif user_signed_in? %>
   <p><%= link_to 'Se candidatar para a vaga', new_user_job_application_path(@job)%></p>
 <% end %>

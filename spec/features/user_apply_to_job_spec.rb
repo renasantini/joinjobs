@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature 'User apply to a job' do
   scenario 'successfully' do
-    job = create :job
+    job = create :job, title: 'Job1'
     user = user_login
     user.profile = create :profile
     visit root_path

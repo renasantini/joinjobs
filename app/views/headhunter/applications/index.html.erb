@@ -1,0 +1,10 @@
+<h1><%= @job.title %></h1>
+<h3>Candidatos</h3>
+
+<ul>
+  <% @applications.each do |application| %>
+    <% if application.job_id == @job.id %>
+      <li><%= link_to application.user.profile.name, headhunter_profile_path(application.user.id) %></li>
+    <% end %>
+  </ul>
+<% end %>
