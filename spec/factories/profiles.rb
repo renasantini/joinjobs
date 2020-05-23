@@ -9,6 +9,7 @@ FactoryBot.define do
     description { "MyText" }
     experience { "MyText" }
     picture { FilesTestHelper.jpg }
-    experience { FilesTestHelper.pdf }
+    resume { FilesTestHelper.pdf }
+    user
   end
 end

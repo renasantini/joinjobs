@@ -1,4 +1,4 @@
-class ProfilesController < ApplicationController
+class User::ProfilesController < ApplicationController
   def index
   end
 
@@ -16,7 +16,7 @@ class ProfilesController < ApplicationController
     @profile.user = current_user
     if @profile.save
       flash[:success] = "Perfil criado com sucesso"
-      redirect_to users_profile_path @profile
+      redirect_to user_profile_path(@profile)
     else
       render 'new'
     end

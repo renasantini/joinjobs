@@ -5,7 +5,7 @@
     <p><%= message %></p>
   <% end %>
 
-  <%= form_with(model: @profile, local: true) do |f| %>
+  <%= form_with(model: [@user, @profile], local: true) do |f| %>
     <p>
       <%= f.label :full_name, 'Nome completo' %>
       <%= f.text_field :full_name %>

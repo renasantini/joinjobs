@@ -6,7 +6,6 @@ feature 'User create profile' do
     user = user_login
     visit root_path
     click_on 'Perfil'
-    click_on 'Preencher perfil'
     fill_in 'Nome completo', with: 'Sócrates Brasileiro Sampaio de Souza Vieira de Oliveira'
     fill_in 'Como você quer ser chamado?', with: 'Doutor Sócrates'
     fill_in 'CPF', with: '195.889.600-45'

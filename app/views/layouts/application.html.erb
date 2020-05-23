@@ -16,8 +16,13 @@
         <%= link_to 'Cadastrar nova vaga', new_headhunter_job_path %>
         <%= link_to 'Sair', destroy_headhunter_session_path, method: :delete %>
       <% elsif user_signed_in? %>
-        <%= link_to 'Perfil', user_profiles_path %>
-        <%= link_to 'Vagas', user_jobs_path %>
+        <% user = current_user %>
+        <% if user.profile.nil? %>
+          <%= link_to 'Perfil', new_user_profile_path %>
+          <% else %>
+          <%= link_to 'Perfil', user_profile_path(user) %>
+          <%= link_to 'Vagas', user_jobs_path %>
+          <% end %>
         <%= link_to 'Sair', destroy_user_session_path, method: :delete %> 
       <% else %>
         <%= link_to 'Inscrever-se como headhunter', new_headhunter_registration_path %>

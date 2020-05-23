@@ -4,6 +4,7 @@ feature 'User apply to a job' do
   scenario 'successfully' do
     job = create :job
     user = user_login
+    user.profile = create :profile
     visit root_path
     click_on 'Vagas'
     click_on 'Job1'
