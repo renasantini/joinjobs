@@ -2,9 +2,10 @@
 <h3>Candidatos</h3>
 
 <ul>
-  <% @applications.each do |application| %>
-    <% if application.job_id == @job.id %>
-      <li><%= link_to application.user.profile.name, headhunter_profile_path(application.user.id) %></li>
+  <% @applications.each do |ap| %>
+    <% if ap.job_id == @job.id %>
+      <li><%= link_to ap.user.profile.name, 
+      headhunter_job_user_profile_path(@job.id, ap.user.id, ap.user.profile.id) %></li>
     <% end %>
   </ul>
 <% end %>

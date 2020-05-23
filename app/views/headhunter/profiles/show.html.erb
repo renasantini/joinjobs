@@ -20,12 +20,22 @@
   </dl>
 </div>
 
-<div>
-<% if @profile.user_id == current_user.id %>
+<% if headhunter_signed_in? %>
+  <%= form_with model: @comment, url: headhunter_comments_path, local: true do |f| %>
+    <div>
+    <%= f.hidden_field :headhunter_id, value: current_headhunter.id %>
+    <%= f.hidden_field :profile_id, value: @profile.id %>
+    <%= f.label :message, 'Comentários' %>
+    <%= f.text_field :message %>
+    <%= f.submit 'Enviar' %>
+    </div>
+  <% end %>
+  
   <p>Comentários</p>
-  <% @profile.comments.each do |c| %>
-    <p><%= c.message %></p>
-    <p><%= c.headhunter %></p>
-    <p><%= l c.created_at%></p>
+  <% @comments.each do |c| %>
+    <% if c.headhunter_id == current_headhunter.id && c.profile_id == @profile.id %>
+      <p><%= c.message %></p>
+      <p><%= l c.created_at%></p>
+    <% end %>
   <% end %>
 <% end %>

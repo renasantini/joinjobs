@@ -17,8 +17,11 @@ Rails.application.routes.draw do
   namespace :headhunter do
     resources :jobs, only: [:index, :show, :new, :create] do
       resources :applications, only: [:index, :show]
+      resources :users, only: [:index] do
+        resources :profiles, only: [:show]
+      end
     end
-    resources :profiles, only: [:show]
+    resources :comments, only: [:create]
   end
 
   namespace :user do
