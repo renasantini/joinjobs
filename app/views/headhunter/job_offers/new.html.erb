@@ -8,6 +8,7 @@
   <%= form_with(model: @job_offer, url: headhunter_profile_job_offers_path, local: true) do |f| %>
     <%= f.hidden_field :headhunter_id, value: current_headhunter.id %>
     <%= f.hidden_field :profile_id, value: @profile.id %>
+    <%= f.hidden_field :status, value: 0 %>
     <p>
       <%= f.label :message, 'Mensagem' %>
       <%= f.text_field :message %>

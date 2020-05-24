@@ -39,6 +39,6 @@ Rails.application.routes.draw do
     resources :profiles, only: [:index, :show, :new, :create]
     resources :answers, only: [:create]
     resources :feedbacks, only: [:index, :show]
-    resources :job_offers, only: [:index, :show]
+    resources :job_offers, only: [:index, :show, :edit, :update]
   end
 end

@@ -1,0 +1,11 @@
+<h1>Responder proposta</h1>
+
+<%= form_with model: @job_offer, url: user_job_offer_path(@job_offer.id), local: true do |f| %>
+    <%= f.label :status, "Aceitar proposta?" %>
+    <%= f.select :status, [['Aceitar', 'accepted'], ['Recusar', 'rejected']] %>
+    <%= f.label :confirm_start, "Confirma a data de início?" %>
+    <%= f.select :confirm_start, [['Sim', 1], ['Não', 0]] %>
+    <%= f.label :answer_message, 'Mensagem' %>
+    <%= f.text_field :answer_message %>
+    <%= f.submit 'Confirmar' %>
+<% end %>

@@ -9,5 +9,6 @@ FactoryBot.define do
     benefits { "MyString" }
     expectations { "MyString" }
     start_date { "2020-05-24" }
+    status { 0 }
   end
 end

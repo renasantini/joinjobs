@@ -17,5 +17,11 @@
   <dd><%= l @job_offer.start_date %></dd>
 
 
-
+<% if @job_offer.status == 'sent' %>
+  <p><%= link_to "Responder proposta", edit_user_job_offer_path(@job_offer.id) %></p>
+  <% elsif @job_offer.status == 'accepted' %>
+  <p>Proposta aceita!</p>
+  <% else %>
+  <p>Proposta recusada.</p>
+<% end %>
 

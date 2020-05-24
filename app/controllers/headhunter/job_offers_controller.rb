@@ -31,6 +31,6 @@ class Headhunter::JobOffersController < ApplicationController
   def job_offer_params
     params.require(:job_offer).permit(:headhunter_id, :profile_id, :message, 
                                       :title, :role, :wage, :benefits, 
-                                      :expectations, :start_date)
+                                      :expectations, :start_date, :status)
   end
 end
