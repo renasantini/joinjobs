@@ -14,7 +14,7 @@ feature 'User view comments' do
     click_on 'Perfil'
     
     expect(page).to have_content('Comentários')
-    expect(page).to have_content('Message')
+    expect(page).to have_content('Pergunta')
   end
 
   scenario 'and answer' do
@@ -31,7 +31,7 @@ feature 'User view comments' do
     fill_in 'Responder',	with: 'Trabalhei como...' 
     click_on 'Enviar'
 
-    expect(page).to have_content('Message')
+    expect(page).to have_content('Pergunta')
     expect(page).to have_content('Trabalhei como...')
   end
 

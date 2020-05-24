@@ -22,6 +22,11 @@ Rails.application.routes.draw do
       end
     end
     resources :comments, only: [:create]
+    resources :profiles, only: [:index] do
+      resources :favorites, only: [:new, :create]
+    end
+    resources :favorites, only: [:index]
+    
   end
 
   namespace :user do

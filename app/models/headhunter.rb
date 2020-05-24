@@ -6,4 +6,5 @@ class Headhunter < ApplicationRecord
   has_many :jobs
   has_many :users, through: :jobs
   has_many :comments
+  has_many :favorites
 end
