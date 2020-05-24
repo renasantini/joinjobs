@@ -16,6 +16,20 @@
   <dt>Data prevista de início:</dt>
   <dd><%= l @job_offer.start_date %></dd>
 
+<% if @job_offer.status == 'sent' %>
+  <p>Aguardando resposta.</p>
+  <% elsif @job_offer.status == 'accepted' %>
+    <p>Proposta aceita!</p>
+    <% if @job_offer.confirm_start == true %>
+      <p>O candidato confirmou a data de início.</p>
+      <% else %>
+        <p>O candidato não pode iniciar na data prevista.</p>
+      <% end %>
+      <p><%= @job_offer.answer_message %>.</p>
+    <% else %>
+  <p>Proposta recusada.</p>
+  <p><%= @job_offer.answer_message %>.</p>
+<% end %>
 
 
 

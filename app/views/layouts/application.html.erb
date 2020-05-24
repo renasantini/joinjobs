@@ -16,6 +16,7 @@
         <%= link_to 'Minhas vagas', headhunter_jobs_path %>
         <%= link_to 'Cadastrar nova vaga', new_headhunter_job_path %>
         <%= link_to 'Candidatos destacados', headhunter_favorites_path %>
+        <%= link_to 'Propostas enviadas', headhunter_job_offers_path %>
         <%= link_to 'Sair', destroy_headhunter_session_path, method: :delete %>
       <% elsif user_signed_in? %>
         <% user = current_user %>
