@@ -2,6 +2,7 @@
 <h1><%= @profile.name %></h1>
 <% if headhunter_signed_in? %>
 <p><%= link_to 'Adicionar aos favoritos', new_headhunter_profile_favorite_path(@profile.id) %></p>
+<p><%= link_to 'Rejeitar perfil', new_headhunter_job_user_profile_feedback_path(@job.id, @user.id, @profile.id) %></p>
 <% end %>
 
 <div>

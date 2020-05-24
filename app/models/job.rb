@@ -3,6 +3,7 @@ before_create :generate_code
 has_many :applications
 has_many :users, through: :applications
 belongs_to :headhunter
+has_many :feedbacks
 
 private
 

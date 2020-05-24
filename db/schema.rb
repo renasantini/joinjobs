@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_23_232420) do
+ActiveRecord::Schema.define(version: 2020_05_24_114126) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -70,6 +70,18 @@ ActiveRecord::Schema.define(version: 2020_05_23_232420) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["headhunter_id"], name: "index_favorites_on_headhunter_id"
     t.index ["profile_id"], name: "index_favorites_on_profile_id"
+  end
+
+  create_table "feedbacks", force: :cascade do |t|
+    t.integer "headhunter_id", null: false
+    t.integer "profile_id", null: false
+    t.string "feedback"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "job_id", null: false
+    t.index ["headhunter_id"], name: "index_feedbacks_on_headhunter_id"
+    t.index ["job_id"], name: "index_feedbacks_on_job_id"
+    t.index ["profile_id"], name: "index_feedbacks_on_profile_id"
   end
 
   create_table "headhunters", force: :cascade do |t|
@@ -141,6 +153,9 @@ ActiveRecord::Schema.define(version: 2020_05_23_232420) do
   add_foreign_key "comments", "profiles"
   add_foreign_key "favorites", "headhunters"
   add_foreign_key "favorites", "profiles"
+  add_foreign_key "feedbacks", "headhunters"
+  add_foreign_key "feedbacks", "jobs"
+  add_foreign_key "feedbacks", "profiles"
   add_foreign_key "jobs", "headhunters"
   add_foreign_key "profiles", "users"
 end

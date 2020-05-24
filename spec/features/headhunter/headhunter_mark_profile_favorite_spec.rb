@@ -21,7 +21,7 @@ feature 'Headhunter mark candidates profile as favorite' do
     fill_in 'Observações',	with: 'Bastante experiência na área' 
     click_on 'Confirmar'
 
-    
+    expect(current_path).to eq(headhunter_favorites_path)
     expect(page).to have_content('Candidatos favoritos')
     expect(page).to have_content(user1.profile.name)
     expect(page).to have_content('Bastante experiência na área')

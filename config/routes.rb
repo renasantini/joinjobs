@@ -12,13 +12,13 @@ Rails.application.routes.draw do
                             confirmations: 'headhunter/confirmations',
                             passwords: 'headhunter/passwords' }
 
- 
-
   namespace :headhunter do
     resources :jobs, only: [:index, :show, :new, :create] do
       resources :applications, only: [:index, :show]
       resources :users, only: [:index] do
-        resources :profiles, only: [:show]
+        resources :profiles, only: [:show] do
+          resources :feedbacks, only: [:new, :create]
+        end
       end
     end
     resources :comments, only: [:create]
@@ -26,7 +26,7 @@ Rails.application.routes.draw do
       resources :favorites, only: [:new, :create]
     end
     resources :favorites, only: [:index]
-    
+    resources :feedbacks, only: [:index]
   end
 
   namespace :user do

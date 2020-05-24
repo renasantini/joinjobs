@@ -1,0 +1,16 @@
+<h1>Adicionar candidato aos favoritos</h1>
+
+<div>
+  <%= form_with(model: @feedback, url: headhunter_job_user_profile_feedbacks_path, local: true) do |f| %>
+    <p>
+      <%= f.hidden_field :headhunter_id, value: current_headhunter.id %>
+      <%= f.hidden_field :profile_id, value: @profile.id %>
+      <%= f.hidden_field :job_id, value: @job.id %>
+    </p>
+    <p>
+      <%= f.label :feedback, 'Feedback' %>
+      <%= f.text_field :feedback %>
+    </p>
+    <%= f.submit 'Enviar' %>
+  <% end %>
+</div>

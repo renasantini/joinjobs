@@ -602,12 +602,24 @@
           null
         ]
       },
+      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/factories/feedbacks.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/factories/headhunters.rb": {
         "lines": [
           1,
           1,
-          13,
-          13,
+          14,
+          14,
           null,
           null
         ]
@@ -616,14 +628,14 @@
         "lines": [
           1,
           1,
-          11,
           12,
-          12,
-          12,
-          12,
-          12,
-          12,
-          12,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
           1,
           null,
           null
@@ -633,16 +645,16 @@
         "lines": [
           1,
           1,
-          12,
+          13,
           4,
-          11,
           12,
-          11,
-          11,
+          13,
           12,
           12,
-          12,
-          12,
+          13,
+          13,
+          13,
+          13,
           1,
           null,
           null
@@ -652,8 +664,8 @@
         "lines": [
           1,
           1,
-          24,
-          24,
+          26,
+          26,
           null,
           null
         ]
@@ -674,21 +686,21 @@
           null,
           null,
           null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
           null,
           null,
           1,
           1,
           1,
-          1,
-          1,
-          null,
           null,
           1,
           1,
-          1,
-          null,
-          1,
-          null,
           null,
           null,
           1,
@@ -751,26 +763,26 @@
           1,
           null,
           1,
-          11,
+          12,
           null,
           null,
           1,
-          11,
+          12,
           null,
           null,
           1,
-          11,
+          12,
           null,
           null,
           1,
-          11,
+          12,
           null,
           null,
           1,
           null,
           1,
-          22,
-          22,
+          24,
+          24,
           null,
           null
         ]
@@ -784,13 +796,13 @@
           null,
           null,
           1,
-          6,
-          6,
+          7,
+          7,
           null,
           null
         ]
       },
-      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/features/headhunter_mark_profile_favorite_spec.rb": {
+      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/features/headhunter/headhunter_mark_profile_favorite_spec.rb": {
         "lines": [
           1,
           null,
@@ -815,7 +827,7 @@
           1,
           1,
           null,
-          null,
+          1,
           1,
           1,
           1,
@@ -832,7 +844,7 @@
           null
         ]
       },
-      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/features/headhunter_register_job_spec.rb": {
+      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/features/headhunter/headhunter_register_job_spec.rb": {
         "lines": [
           1,
           null,
@@ -865,7 +877,36 @@
           null
         ]
       },
-      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/features/headhunter_view_users_spec.rb": {
+      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/features/headhunter/headhunter_reject_user_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/features/headhunter/headhunter_view_users_spec.rb": {
         "lines": [
           1,
           null,
@@ -956,7 +997,7 @@
           null
         ]
       },
-      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/features/user_apply_to_job_spec.rb": {
+      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/features/user/user_apply_to_job_spec.rb": {
         "lines": [
           1,
           null,
@@ -983,7 +1024,7 @@
           null
         ]
       },
-      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/features/user_authentication_spec.rb": {
+      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/features/user/user_authentication_spec.rb": {
         "lines": [
           1,
           null,
@@ -1057,7 +1098,7 @@
           null
         ]
       },
-      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/features/user_create_profile_spec.rb": {
+      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/features/user/user_create_profile_spec.rb": {
         "lines": [
           1,
           null,
@@ -1092,7 +1133,7 @@
           null
         ]
       },
-      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/features/user_view_profile_comments_spec.rb": {
+      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/features/user/user_view_profile_comments_spec.rb": {
         "lines": [
           1,
           null,
@@ -1217,6 +1258,24 @@
           null
         ]
       },
+      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/models/feedback_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/app/models/feedback.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
       "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/models/headhunter_spec.rb": {
         "lines": [
           1,
@@ -1257,13 +1316,14 @@
           1,
           1,
           1,
-          null,
           1,
           null,
           1,
-          12,
+          null,
+          1,
           13,
-          13,
+          14,
+          14,
           null,
           null,
           null
@@ -1280,6 +1340,7 @@
       },
       "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/app/models/profile.rb": {
         "lines": [
+          1,
           1,
           1,
           1,
@@ -1439,11 +1500,11 @@
           1,
           null,
           1,
-          5,
+          6,
           null,
           null,
           1,
-          6,
+          7,
           null,
           null,
           1,
@@ -1479,8 +1540,8 @@
           1,
           null,
           1,
-          5,
-          5,
+          6,
+          6,
           null,
           null,
           null,
@@ -1492,11 +1553,11 @@
           1,
           null,
           1,
-          5,
-          5,
-          5,
-          5,
-          5,
+          6,
+          6,
+          6,
+          6,
+          6,
           null,
           null,
           null
@@ -1517,6 +1578,43 @@
           1,
           null,
           null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/app/controllers/headhunter/feedbacks_controller.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
           1,
           1,
           1,
@@ -1694,6 +1792,6 @@
         ]
       }
     },
-    "timestamp": 1590290290
+    "timestamp": 1590321730
   }
 }

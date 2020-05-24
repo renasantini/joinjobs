@@ -1,0 +1,9 @@
+<h1>Candidatos rejeitados</h1>
+
+<ul>
+  <% @feedbacks.each do |rejected| %>
+    <li><%= rejected.job.title %></li>
+    <li><%= rejected.profile.name %></li>
+    <li><%= rejected.feedback %></li>
+  <% end %>
+</ul>
