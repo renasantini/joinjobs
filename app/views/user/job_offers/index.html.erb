@@ -1,0 +1,9 @@
+<h1>Propostas</h1>
+
+<ul>
+  <% @job_offers.each do |offer| %>
+    <% if offer.profile_id == current_user.profile.id %>
+      <li><%= link_to offer.title, user_job_offer_path(offer.id) %></li>
+    <% end %>
+  <% end %>
+</ul>

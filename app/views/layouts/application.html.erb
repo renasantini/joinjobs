@@ -25,7 +25,7 @@
           <%= link_to 'Perfil', user_profile_path(user) %>
           <%= link_to 'Minhas vagas', user_applications_path %>
           <%= link_to 'Ver vagas', user_jobs_path %>
-          <%= link_to 'Propostas', user_jobs_path %>
+          <%= link_to 'Propostas', user_job_offers_path %>
           <%= link_to 'Feedbacks', user_feedbacks_path %>
           <% end %>
         <%= link_to 'Sair', destroy_user_session_path, method: :delete %> 
