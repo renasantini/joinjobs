@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_24_114126) do
+ActiveRecord::Schema.define(version: 2020_05_24_130656) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -101,6 +101,22 @@ ActiveRecord::Schema.define(version: 2020_05_24_114126) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "job_offers", force: :cascade do |t|
+    t.string "message"
+    t.integer "profile_id", null: false
+    t.integer "headhunter_id", null: false
+    t.string "title"
+    t.string "role"
+    t.integer "wage"
+    t.string "benefits"
+    t.string "expectations"
+    t.date "start_date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["headhunter_id"], name: "index_job_offers_on_headhunter_id"
+    t.index ["profile_id"], name: "index_job_offers_on_profile_id"
+  end
+
   create_table "jobs", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -156,6 +172,8 @@ ActiveRecord::Schema.define(version: 2020_05_24_114126) do
   add_foreign_key "feedbacks", "headhunters"
   add_foreign_key "feedbacks", "jobs"
   add_foreign_key "feedbacks", "profiles"
+  add_foreign_key "job_offers", "headhunters"
+  add_foreign_key "job_offers", "profiles"
   add_foreign_key "jobs", "headhunters"
   add_foreign_key "profiles", "users"
 end

@@ -15,6 +15,7 @@
     <% if headhunter_signed_in? %>
         <%= link_to 'Minhas vagas', headhunter_jobs_path %>
         <%= link_to 'Cadastrar nova vaga', new_headhunter_job_path %>
+        <%= link_to 'Candidatos destacados', headhunter_favorites_path %>
         <%= link_to 'Sair', destroy_headhunter_session_path, method: :delete %>
       <% elsif user_signed_in? %>
         <% user = current_user %>
@@ -24,7 +25,8 @@
           <%= link_to 'Perfil', user_profile_path(user) %>
           <%= link_to 'Minhas vagas', user_applications_path %>
           <%= link_to 'Ver vagas', user_jobs_path %>
-          <%= link_to 'Propostas e feedbacks', user_feedbacks_path %>
+          <%= link_to 'Propostas', user_jobs_path %>
+          <%= link_to 'Feedbacks', user_feedbacks_path %>
           <% end %>
         <%= link_to 'Sair', destroy_user_session_path, method: :delete %> 
       <% else %>

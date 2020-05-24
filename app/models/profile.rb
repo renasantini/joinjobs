@@ -4,4 +4,5 @@ class Profile < ApplicationRecord
   belongs_to :user
   has_many :comments
   has_many :feedbacks
+  has_many :job_offers
 end

@@ -1,0 +1,41 @@
+<h1>Enviar proposta</h1>
+<h3><%= @profile.name %>
+<div>
+  <% @job_offer.errors.full_messages.each do |message|%>
+    <p><%= message %></p>
+  <% end %>
+
+  <%= form_with(model: @job_offer, url: headhunter_profile_job_offers_path, local: true) do |f| %>
+    <%= f.hidden_field :headhunter_id, value: current_headhunter.id %>
+    <%= f.hidden_field :profile_id, value: @profile.id %>
+    <p>
+      <%= f.label :message, 'Mensagem' %>
+      <%= f.text_field :message %>
+    </p>
+    <p>
+      <%= f.label :title, 'Cargo' %>
+      <%= f.text_field :title %>
+    </p>
+    <p>
+      <%= f.label :role, 'Funções' %>
+      <%= f.text_field :role %>
+    </p>
+    <p>
+      <%= f.label :wage, 'Salário' %>
+      <%= f.number_field :wage %>
+    </p>
+    <p>
+      <%= f.label :benefits, 'Benefícios' %>
+      <%= f.text_field :benefits %>
+    </p>
+    <p>
+      <%= f.label :expectations, 'Expectativas da empresa' %>
+      <%= f.text_field :expectations %>
+    </p>
+    <p>
+      <%= f.label :start_date, 'Data prevista de início' %>
+      <%= f.date_field :start_date %>
+    </p>
+    <%= f.submit 'Enviar' %>
+  <% end %>
+</div>

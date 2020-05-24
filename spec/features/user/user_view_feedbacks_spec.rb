@@ -10,7 +10,7 @@ feature 'User view feedback' do
     create(:feedback, headhunter: headhunter, profile: user.profile, job: job)
     
     visit root_path
-    click_on 'Propostas e feedbacks'
+    click_on 'Feedbacks'
     
         
     expect(page).to have_content('Feedbacks')

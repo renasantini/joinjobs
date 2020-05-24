@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :favorite do
-    headhunter { nil }
-    profile { nil }
+    headhunter 
+    profile 
     observations { "MyString" }
   end
 end

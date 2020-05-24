@@ -1,0 +1,21 @@
+<h1>Proposta <%= @job_offer.profile.name %></h1>
+<h3>Enviada em: <%= @job_offer.created_at %></h3>
+
+<dl>
+  <dd><%= @job_offer.message %></dd>
+  <dt>Cargo:</dt>
+  <dd><%= @job_offer.title %></dd>
+  <dt>Funções:</dt>
+  <dd><%= @job_offer.role %></dd>
+  <dt>Salário:</dt>
+  <dd><%= number_to_currency @job_offer.wage %></dd>
+  <dt>Benefícios:</dt>
+  <dd><%= @job_offer.benefits %></dd>
+  <dt>Expectativas da empresa:</dt>
+  <dd><%= @job_offer.expectations %></dd>
+  <dt>Data prevista de início:</dt>
+  <dd><%= l @job_offer.start_date %></dd>
+
+
+
+

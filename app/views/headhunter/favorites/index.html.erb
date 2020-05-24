@@ -1,8 +1,22 @@
-<h1>Candidatos favoritos</h1>
+<h1>Candidatos destacados</h1>
 
-<ul>
-  <% @favorites.each do |favorite| %>
-    <li><%= favorite.profile.name %></li>
-    <li><%= favorite.observations %></li>
+<table>
+  <thead>
+    <tr>
+      <th>Candidato</th>
+      <th>Observações</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @favorites.each do |fav| %>
+    <tr id="fav-<%= fav.id %>">
+    <% if fav.headhunter == current_headhunter %>
+      <td><%= fav.profile.name %></td>
+      <td><%= fav.observations %></td>
+      <td><%= link_to 'Enviar proposta', new_headhunter_profile_job_offer_path(fav.profile.id) %></td>
+    </tr>
+    <% end %>
   <% end %>
-</ul>
+  </tbody>
+</table>
