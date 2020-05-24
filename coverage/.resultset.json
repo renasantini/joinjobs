@@ -608,7 +608,7 @@
           1,
           1,
           1,
-          1,
+          2,
           1,
           null,
           null
@@ -618,8 +618,8 @@
         "lines": [
           1,
           1,
-          14,
-          14,
+          15,
+          15,
           null,
           null
         ]
@@ -628,14 +628,14 @@
         "lines": [
           1,
           1,
-          12,
           13,
-          13,
-          13,
-          13,
-          13,
-          13,
-          13,
+          14,
+          14,
+          14,
+          14,
+          14,
+          14,
+          14,
           1,
           null,
           null
@@ -645,16 +645,16 @@
         "lines": [
           1,
           1,
+          14,
+          5,
           13,
-          4,
-          12,
-          13,
-          12,
-          12,
+          14,
           13,
           13,
-          13,
-          13,
+          14,
+          14,
+          14,
+          14,
           1,
           null,
           null
@@ -664,8 +664,8 @@
         "lines": [
           1,
           1,
-          26,
-          26,
+          28,
+          28,
           null,
           null
         ]
@@ -707,6 +707,7 @@
           1,
           1,
           null,
+          1,
           1,
           1,
           1,
@@ -763,26 +764,26 @@
           1,
           null,
           1,
-          12,
+          13,
           null,
           null,
           1,
-          12,
+          13,
           null,
           null,
           1,
-          12,
+          13,
           null,
           null,
           1,
-          12,
+          13,
           null,
           null,
           1,
           null,
           1,
-          24,
-          24,
+          26,
+          26,
           null,
           null
         ]
@@ -791,8 +792,8 @@
         "lines": [
           1,
           1,
-          4,
-          4,
+          5,
+          5,
           null,
           null,
           1,
@@ -1133,6 +1134,30 @@
           null
         ]
       },
+      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/features/user/user_view_feedbacks_offers_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/features/user/user_view_profile_comments_spec.rb": {
         "lines": [
           1,
@@ -1321,9 +1346,9 @@
           1,
           null,
           1,
-          13,
           14,
-          14,
+          15,
+          15,
           null,
           null,
           null
@@ -1772,6 +1797,22 @@
           null
         ]
       },
+      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/app/controllers/user/feedbacks_controller.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
       "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/app/controllers/user/answers_controller.rb": {
         "lines": [
           1,
@@ -1792,6 +1833,6 @@
         ]
       }
     },
-    "timestamp": 1590321730
+    "timestamp": 1590323026
   }
 }

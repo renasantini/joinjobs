@@ -6,7 +6,7 @@ feature 'User apply to a job' do
     user = user_login
     user.profile = create :profile
     visit root_path
-    click_on 'Vagas'
+    click_on 'Ver vagas'
     click_on 'Job1'
     click_on 'Se candidatar para a vaga'
     click_on 'Confirmar candidatura'

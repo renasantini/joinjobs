@@ -22,7 +22,9 @@
           <%= link_to 'Perfil', new_user_profile_path %>
           <% else %>
           <%= link_to 'Perfil', user_profile_path(user) %>
-          <%= link_to 'Vagas', user_jobs_path %>
+          <%= link_to 'Minhas vagas', user_applications_path %>
+          <%= link_to 'Ver vagas', user_jobs_path %>
+          <%= link_to 'Propostas e feedbacks', user_feedbacks_path %>
           <% end %>
         <%= link_to 'Sair', destroy_user_session_path, method: :delete %> 
       <% else %>

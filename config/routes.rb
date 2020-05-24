@@ -36,5 +36,6 @@ Rails.application.routes.draw do
     resources :applications, only: [:index, :show]
     resources :profiles, only: [:index, :show, :new, :create]
     resources :answers, only: [:create]
+    resources :feedbacks, only: [:index, :show]
   end
 end
