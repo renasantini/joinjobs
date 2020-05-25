@@ -1,5 +1,5 @@
 class Headhunter::FavoritesController < ApplicationController
-  
+  before_action :authenticate_headhunter!
 
   def index
     @favorites = Favorite.all

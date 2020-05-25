@@ -15,21 +15,4 @@ feature 'User apply to a job' do
     expect(page).to have_content("Minhas vagas")
     expect(page).to have_content(job.title)
   end
-
-    
-  xscenario "can't apply to the same job" do
-    job = create(:job, title: 'Job1')
-    user = user_login
-    user.profile = create(:profile)
-    visit root_path
-    click_on 'Ver vagas'
-    click_on 'Job1'
-    click_on 'Se candidatar para a vaga'
-    click_on 'Confirmar candidatura'
-    click_on 'Ver vagas'
-    click_on 'Job1'
-
-    expect(page).to have_content("Você já se candidatou para essa vaga")
-    expect(page).to have_content(job.title)
-  end
 end

@@ -1,4 +1,5 @@
 class Headhunter::CommentsController < ApplicationController
+  before_action :authenticate_headhunter!
   
   def show
     @comments = Comment.find(params[:profile_id])

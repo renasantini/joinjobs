@@ -1,4 +1,6 @@
 class User::JobOffersController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
     @job_offers = JobOffer.all
   end

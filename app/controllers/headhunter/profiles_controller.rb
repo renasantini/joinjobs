@@ -1,5 +1,6 @@
 class Headhunter::ProfilesController < ApplicationController
-  
+  before_action :authenticate_headhunter!
+
   def show
     @job = Job.find(params[:id])
     @user = Job.find(params[:id])

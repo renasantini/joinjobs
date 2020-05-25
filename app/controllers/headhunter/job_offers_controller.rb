@@ -1,5 +1,6 @@
 class Headhunter::JobOffersController < ApplicationController
-  
+  before_action :authenticate_headhunter!
+
   def index
     @job_offers = JobOffer.all
   end

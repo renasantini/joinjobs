@@ -1,5 +1,5 @@
 class Headhunter::FeedbacksController < ApplicationController
-  
+  before_action :authenticate_headhunter!
 
   def index
     @feedbacks = Feedback.all

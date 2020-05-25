@@ -1,4 +1,5 @@
   class Headhunter::JobsController < ApplicationController
+    before_action :authenticate_headhunter!
 
     def index
       @jobs = Job.all

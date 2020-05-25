@@ -1,5 +1,6 @@
 class User::AnswersController < ApplicationController
-  
+  before_action :authenticate_user!
+
   def show
     @answers = Comment.find(params[:comment_id])
   end

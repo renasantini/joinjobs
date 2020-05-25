@@ -1,5 +1,6 @@
 class User::ApplicationsController < ApplicationController
-  
+  before_action :authenticate_user!
+
   def index
     @user = current_user
     @applications = current_user.applications
