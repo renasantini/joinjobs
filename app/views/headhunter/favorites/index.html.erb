@@ -6,6 +6,7 @@
       <th>Candidato</th>
       <th>Observações</th>
       <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -15,6 +16,7 @@
       <td><%= fav.profile.name %></td>
       <td><%= fav.observations %></td>
       <td><%= link_to 'Enviar proposta', new_headhunter_profile_job_offer_path(fav.profile.id) %></td>
+      <td><%= link_to 'Remover dos destacados', headhunter_profile_favorite_path(fav.profile.id, fav.id), method: :delete %></td>
     </tr>
     <% end %>
   <% end %>

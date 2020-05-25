@@ -23,6 +23,13 @@ class Headhunter::FavoritesController < ApplicationController
     end
   end
 
+  def destroy
+    @favorite = Favorite.find(params[:id])
+    @favorite.destroy
+    flash[:notice] = 'Perfil removido dos destacados com sucesso'
+    redirect_to headhunter_favorites_path
+  end
+
   private
 
   def favorites_params

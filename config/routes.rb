@@ -23,7 +23,7 @@ Rails.application.routes.draw do
     end
     resources :comments, only: [:create]
     resources :profiles, only: [:index] do
-      resources :favorites, only: [:new, :create]
+      resources :favorites, only: [:new, :create, :destroy]
       resources :job_offers, only: [:new, :create]
     end
     resources :favorites, only: [:index]
@@ -33,6 +33,7 @@ Rails.application.routes.draw do
 
   namespace :user do
     resources :jobs, only: [:index, :show] do
+      get 'search', on: :collection
       resources :applications, only: [:index, :new, :create]
     end
     resources :applications, only: [:index, :show]

@@ -597,7 +597,7 @@
           1,
           1,
           1,
-          2,
+          5,
           null,
           null
         ]
@@ -618,8 +618,8 @@
         "lines": [
           1,
           1,
-          23,
-          23,
+          29,
+          29,
           null,
           null
         ]
@@ -648,14 +648,14 @@
         "lines": [
           1,
           1,
-          21,
-          22,
-          22,
-          22,
-          22,
-          22,
-          22,
-          22,
+          23,
+          28,
+          28,
+          28,
+          28,
+          28,
+          28,
+          28,
           1,
           null,
           null
@@ -665,16 +665,16 @@
         "lines": [
           1,
           1,
-          22,
-          8,
-          21,
-          22,
-          21,
-          21,
-          22,
-          22,
-          22,
-          22,
+          28,
+          10,
+          27,
+          28,
+          27,
+          27,
+          28,
+          28,
+          28,
+          28,
           1,
           null,
           null
@@ -684,8 +684,8 @@
         "lines": [
           1,
           1,
-          44,
-          44,
+          56,
+          56,
           null,
           null
         ]
@@ -725,6 +725,7 @@
           1,
           null,
           null,
+          1,
           1,
           1,
           1,
@@ -789,26 +790,26 @@
           1,
           null,
           1,
-          21,
+          27,
           null,
           null,
           1,
-          21,
+          27,
           null,
           null,
           1,
-          21,
+          27,
           null,
           null,
           1,
-          21,
+          27,
           null,
           null,
           1,
           null,
           1,
-          42,
-          42,
+          54,
+          54,
           null,
           null
         ]
@@ -817,13 +818,13 @@
         "lines": [
           1,
           1,
-          8,
-          8,
+          10,
+          10,
           null,
           null,
           1,
-          12,
-          12,
+          14,
+          14,
           null,
           null
         ]
@@ -861,11 +862,41 @@
           null,
           null,
           1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
           null,
           null,
           1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -1160,7 +1191,19 @@
           null,
           null,
           1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           null,
+          0,
+          0,
           null,
           null
         ]
@@ -1267,6 +1310,43 @@
           1,
           1,
           1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/features/user/user_search_job_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
           1,
           1,
           1,
@@ -1421,120 +1501,6 @@
           null
         ]
       },
-      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/models/answer_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
-      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/app/models/answer.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/models/application_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
-      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/app/models/application.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/models/comment_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
-      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/app/models/comment.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/models/favorite_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
-      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/app/models/favorite.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/models/feedback_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
-      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/app/models/feedback.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/models/headhunter_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
-      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/models/job_offer_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
-      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/app/models/job_offer.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          null
-        ]
-      },
       "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/models/job_spec.rb": {
         "lines": [
           1,
@@ -1571,41 +1537,11 @@
           1,
           null,
           1,
-          22,
-          23,
-          23,
+          28,
+          29,
+          29,
           null,
           null,
-          null
-        ]
-      },
-      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/models/profile_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
-      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/app/models/profile.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/spec/models/user_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
           null
         ]
       },
@@ -1746,6 +1682,26 @@
           null
         ]
       },
+      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/app/models/profile.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/app/models/application.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
       "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/app/controllers/headhunter/jobs_controller.rb": {
         "lines": [
           1,
@@ -1814,13 +1770,22 @@
           null
         ]
       },
+      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/app/models/comment.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
       "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/app/controllers/headhunter/favorites_controller.rb": {
         "lines": [
           1,
           null,
           null,
           1,
-          2,
+          5,
           null,
           null,
           1,
@@ -1842,10 +1807,25 @@
           null,
           null,
           1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
           null,
           1,
           1,
           null,
+          null
+        ]
+      },
+      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/app/models/favorite.rb": {
+        "lines": [
+          1,
+          1,
+          1,
           null
         ]
       },
@@ -1883,6 +1863,15 @@
           1,
           1,
           null,
+          null
+        ]
+      },
+      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/app/models/feedback.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
           null
         ]
       },
@@ -1926,6 +1915,15 @@
           null
         ]
       },
+      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/app/models/job_offer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
       "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/app/controllers/headhunter/comments_controller.rb": {
         "lines": [
           1,
@@ -1947,16 +1945,28 @@
           null
         ]
       },
+      "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/app/models/answer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
       "/home/rsantini/Área de Trabalho/Renato Santini/Cursos/TreinaDev/Curso 1/Projeto/joinjobs/app/controllers/user/jobs_controller.rb": {
         "lines": [
           1,
           null,
           1,
-          1,
+          3,
           null,
           null,
           1,
           1,
+          null,
+          null,
+          1,
+          2,
           null,
           null,
           null,
@@ -2130,6 +2140,6 @@
         ]
       }
     },
-    "timestamp": 1590359079
+    "timestamp": 1590365095
   }
 }

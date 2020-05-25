@@ -8,7 +8,11 @@ class User::JobsController < ApplicationController
     @job = Job.find(params[:id])
   end
   
-  
+  def search
+    @jobs = Job.where('title like ? OR description like ? OR skills like?',
+                      "%#{params[:q]}%", "%#{params[:q]}%", "%#{params[:q]}%")
+  end
+
   private
 
   def job_params
