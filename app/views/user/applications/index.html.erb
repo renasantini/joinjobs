@@ -1,9 +1,9 @@
 <h1>Minhas vagas</h1>
 
-<% if @applications.any? %>
 <ul>
   <% @applications.each do |application| %>
-    <li><%= link_to application.job.title, user_job_applications_path(application) %></li>
+    <% if application.user == current_user %>
+      <li><%= link_to application.job.title, user_job_applications_path(application) %></li>
+    <% end %>
   <% end %>
 </ul>
-<% end %>

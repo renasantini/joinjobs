@@ -2,8 +2,10 @@
 
 <ul>
   <% @feedbacks.each do |rejected| %>
-    <li><%= rejected.job.title %></li>
-    <li><%= rejected.profile.name %></li>
-    <li><%= rejected.feedback %></li>
+    <% if rejected.headhunter == current_headhunter %>
+      <li><%= rejected.job.title %></li>
+      <li><%= rejected.profile.name %></li>
+      <li><%= rejected.feedback %></li>
+    <% end %>
   <% end %>
 </ul>

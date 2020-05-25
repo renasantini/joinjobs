@@ -10,32 +10,37 @@
   </head>
 
   <body>
-    <nav>
-      
-    <% if headhunter_signed_in? %>
-        <%= link_to 'Minhas vagas', headhunter_jobs_path %>
-        <%= link_to 'Cadastrar nova vaga', new_headhunter_job_path %>
-        <%= link_to 'Candidatos destacados', headhunter_favorites_path %>
-        <%= link_to 'Propostas enviadas', headhunter_job_offers_path %>
-        <%= link_to 'Sair', destroy_headhunter_session_path, method: :delete %>
-      <% elsif user_signed_in? %>
-        <% user = current_user %>
-        <% if user.profile.nil? %>
-          <%= link_to 'Perfil', new_user_profile_path %>
-          <% else %>
-          <%= link_to 'Perfil', user_profile_path(user) %>
-          <%= link_to 'Minhas vagas', user_applications_path %>
-          <%= link_to 'Ver vagas', user_jobs_path %>
-          <%= link_to 'Propostas', user_job_offers_path %>
-          <%= link_to 'Feedbacks', user_feedbacks_path %>
-          <% end %>
-        <%= link_to 'Sair', destroy_user_session_path, method: :delete %> 
-      <% else %>
-        <%= link_to 'Inscrever-se como headhunter', new_headhunter_registration_path %>
-        <%= link_to 'Entrar como headhunter', new_headhunter_session_path %>
-        <%= link_to 'Inscrever-se', new_user_registration_path %>
-        <%= link_to 'Entrar', new_user_session_path %>
-      <% end %>
+    <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div id="navbarResponsive" class="collapse navbar-collapse">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+            <% if headhunter_signed_in? %>
+              <a class="nav-link js-scroll-trigger"> <%= link_to 'Minhas vagas', headhunter_jobs_path %></a>
+              <a class="nav-link js-scroll-trigger"><%= link_to 'Cadastrar nova vaga', new_headhunter_job_path %></a>
+              <a class="nav-link js-scroll-trigger"><%= link_to 'Candidatos destacados', headhunter_favorites_path %></a>
+              <a class="nav-link js-scroll-trigger"><%= link_to 'Propostas enviadas', headhunter_job_offers_path %></a>
+              <a class="nav-link js-scroll-trigger"><%= link_to 'Sair', destroy_headhunter_session_path, method: :delete %></a>
+            <% elsif user_signed_in? %>
+              <% user = current_user %>
+              <% if user.profile.nil? %>
+                <a class="nav-link js-scroll-trigger"><%= link_to 'Perfil', new_user_profile_path %></a>
+              <% else %>
+                <a class="nav-link js-scroll-trigger"><%= link_to 'Perfil', user_profile_path(user) %></a>
+                <a class="nav-link js-scroll-trigger"><%= link_to 'Minhas vagas', user_applications_path %></a>
+                <a class="nav-link js-scroll-trigger"><%= link_to 'Ver vagas', user_jobs_path %></a>
+                <a class="nav-link js-scroll-trigger"><%= link_to 'Propostas', user_job_offers_path %></a>
+                <a class="nav-link js-scroll-trigger"><%= link_to 'Feedbacks', user_feedbacks_path %></a>
+              <% end %>
+              <a class="nav-link js-scroll-trigger"><%= link_to 'Sair', destroy_user_session_path, method: :delete %> </a>
+            <% else %>
+              <a class="nav-link js-scroll-trigger"><%= link_to 'Inscrever-se como headhunter', new_headhunter_registration_path %></a>
+              <a class="nav-link js-scroll-trigger"><%= link_to 'Entrar como headhunter', new_headhunter_session_path %></a>
+              <a class="nav-link js-scroll-trigger"><%= link_to 'Inscrever-se', new_user_registration_path %></a>
+              <a class="nav-link js-scroll-trigger"><%= link_to 'Entrar', new_user_session_path %></a>
+            <% end %>
+          </li>
+        </ul>
+      <div>
     </nav>
 
     <p class="notice"><%= flash[:notice] %></p>

@@ -2,7 +2,9 @@
 
 <ul>
   <% @feedbacks.each do |feedback| %>
-    <li><%= feedback.job.title %></li>
-    <li><%= feedback.feedback %></li>
+    <% if feedback.profile_id == current_user.profile.id %>
+      <li><%= feedback.job.title %></li>
+      <li><%= feedback.feedback %></li>
+    <% end %>
   <% end %>
 </ul>
