@@ -1,50 +1,99 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/sandstone/bulmaswatch.min.css">
+    <style>
+      .hero .container {
+      width: 95%;
+      }
+    </style>
+
+    <link rel="icon" type="image/png" href="app/assets/images/jj.ico">
+    
     <title>JoinJobs</title>
+    
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
-  <body>
-    <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <div id="navbarResponsive" class="collapse navbar-collapse">
-        <ul class="navbar-nav text-uppercase ml-auto">
-          <li class="nav-item">
-            <% if headhunter_signed_in? %>
-              <a class="nav-link js-scroll-trigger"> <%= link_to 'Minhas vagas', headhunter_jobs_path %></a>
-              <a class="nav-link js-scroll-trigger"><%= link_to 'Cadastrar nova vaga', new_headhunter_job_path %></a>
-              <a class="nav-link js-scroll-trigger"><%= link_to 'Candidatos destacados', headhunter_favorites_path %></a>
-              <a class="nav-link js-scroll-trigger"><%= link_to 'Propostas enviadas', headhunter_job_offers_path %></a>
-              <a class="nav-link js-scroll-trigger"><%= link_to 'Sair', destroy_headhunter_session_path, method: :delete %></a>
-            <% elsif user_signed_in? %>
-              <% user = current_user %>
-              <% if user.profile.nil? %>
-                <a class="nav-link js-scroll-trigger"><%= link_to 'Perfil', new_user_profile_path %></a>
-              <% else %>
-                <a class="nav-link js-scroll-trigger"><%= link_to 'Perfil', user_profile_path(user) %></a>
-                <a class="nav-link js-scroll-trigger"><%= link_to 'Minhas vagas', user_applications_path %></a>
-                <a class="nav-link js-scroll-trigger"><%= link_to 'Ver vagas', user_jobs_path %></a>
-                <a class="nav-link js-scroll-trigger"><%= link_to 'Propostas', user_job_offers_path %></a>
-                <a class="nav-link js-scroll-trigger"><%= link_to 'Feedbacks', user_feedbacks_path %></a>
-              <% end %>
-              <a class="nav-link js-scroll-trigger"><%= link_to 'Sair', destroy_user_session_path, method: :delete %> </a>
-            <% else %>
-              <a class="nav-link js-scroll-trigger"><%= link_to 'Inscrever-se como headhunter', new_headhunter_registration_path %></a>
-              <a class="nav-link js-scroll-trigger"><%= link_to 'Entrar como headhunter', new_headhunter_session_path %></a>
-              <a class="nav-link js-scroll-trigger"><%= link_to 'Inscrever-se', new_user_registration_path %></a>
-              <a class="nav-link js-scroll-trigger"><%= link_to 'Entrar', new_user_session_path %></a>
-            <% end %>
-          </li>
-        </ul>
+  <body class="theme-page">
+    <section>
       <div>
-    </nav>
-
-    <p class="notice"><%= flash[:notice] %></p>
-    <p class="alert"><%= flash[:alert] %></p>
-    <%= yield %>
+        <nav class="navbar ">
+          <div class="container">
+            <div class="navbar-brand">
+              <a class="navbar-item"><%= link_to 'JoinJobs', root_path %></a>
+              <a class="navbar-item">
+                <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
+              </a>
+              <span class="navbar-burger burger" data-target="navbarMenuHero1">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </div>
+            <div id="navbarMenuHero1" class="navbar-menu">
+              <div class="navbar-end">
+                <% if headhunter_signed_in? %>
+                  <a class="navbar-item "> <%= link_to 'Minhas vagas',   headhunter_jobs_path %></a>
+                  <a class="navbar-item "><%= link_to 'Cadastrar nova vaga',   new_headhunter_job_path %></a>
+                  <a class="navbar-item "><%= link_to 'Candidatos destacados',   headhunter_favorites_path %></a>
+                  <a class="navbar-item "><%= link_to 'Propostas enviadas',  headhunter_job_offers_path %></a>
+                  <a class="navbar-item is-active"><%= link_to 'Sair',  destroy_headhunter_session_path, method: :delete %></a>
+                <% elsif user_signed_in? %>
+                  <% user = current_user %>
+                  <% if user.profile.nil? %>
+                    <a class="navbar-item "><%= link_to 'Perfil',  new_user_profile_path %></a>
+                  <% else %>
+                    <a class="navbar-item "><%= link_to 'Perfil', user_profile_path(user) %></a>
+                    <a class="navbar-item "><%= link_to 'Minhas vagas',  user_applications_path %></a>
+                    <a class="navbar-item "><%= link_to 'Ver vagas',   user_jobs_path %>  </a>
+                    <a class="navbar-item "><%= link_to 'Propostas',   user_job_offers_path %></a>
+                    <a class="navbar-item "><%= link_to 'Feedbacks',   user_feedbacks_path %></a>
+                  <% end %>
+                  <a class="navbar-item is-active"><%= link_to 'Sair',  destroy_user_session_path, method: :delete %> </a>
+                <% else %>
+                  <a class="navbar-item "><%= link_to 'Inscrever-se como   headhunter', new_headhunter_registration_path %></a>
+                  <a class="navbar-item "><%= link_to 'Entrar como headhunter',  new_headhunter_session_path %></a>
+                  <a class="navbar-item "><%= link_to 'Inscrever-se',  new_user_registration_path %></a>
+                  <a class="navbar-item "><%= link_to 'Entrar',  new_user_session_path %></a>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div>
+        <%= flash[:notice] %>
+      </div>
+      <div>
+        <%= flash[:alert] %>
+      </div>
+    
+      <%= yield %>
+    
+      <div class="hero-foot">
+        <nav class="tabs">
+          <div class="container">
+            <ul>
+              <li>
+                <a href="https://www.campuscode.com.br/">Campus Code</a>
+              </li>
+              <li>
+                <a href="https://www.treinadev.com.br/">TreinaDev</a>
+              </li>
+              <li>
+              </li>
+            </ul>
+            <h6>» ® Feito por Renato Santini «</h6>
+          </div>
+        </nav>
+      </div>
+    </section>
   </body>
 </html>
